@@ -14,6 +14,9 @@
  *= require_self
  */
 
+@import 'bootstrap';
+@import 'effective_bootstrap';
+
 body {
   background-color: black;
   color: silver;
@@ -23,19 +26,11 @@ body {
   padding: 60px;
 }
 
-// #navbarNav {
-//   position: fixed;
-//   width: 100%;
-// }
+.sign {
+  margin: 200px;
+}
 
 .title {
   text-align: center;
   margin: 20px;
 }
-
-// .footer {
-//   width: 100%;
-//   position: fixed;
-//   bottom: 0;
-//   height: 100px;
-// }
