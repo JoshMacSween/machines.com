@@ -1,3 +1,14 @@
+PATH
+  remote: /Users/joshmacsween/Desktop/projects/effective_bootstrap
+  specs:
+    effective_bootstrap (0.6.12)
+      bootstrap (>= 4.0.0)
+      coffee-rails
+      inline_svg
+      jquery-rails
+      rails (>= 4.0.0)
+      sass
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -80,13 +91,6 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
-    effective_bootstrap (0.6.1)
-      bootstrap (>= 4.0.0)
-      coffee-rails
-      inline_svg
-      jquery-rails
-      rails (>= 4.0.0)
-      sass
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.11.1)
@@ -227,7 +231,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  effective_bootstrap
+  effective_bootstrap!
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
