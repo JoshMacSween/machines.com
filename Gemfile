@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
-gem 'effective_bootstrap', path: '/Users/joshmacsween/Desktop/projects/effective_bootstrap'
+gem 'effective_bootstrap'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0'
 
