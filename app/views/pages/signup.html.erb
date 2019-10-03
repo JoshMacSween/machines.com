@@ -1,5 +1,5 @@
 <div class="sign">
-  <%= effective_form_with model: @user do |f| %>
+  <%= effective_form_with model: User.new do |f| %>
     <%= f.text_field :username %>
     <%= f.email_field :email %>
     <%= f.submit "Create" %>

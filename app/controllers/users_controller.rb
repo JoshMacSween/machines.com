@@ -24,13 +24,17 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    Rails.logger.info "yay"
     @user = User.new(user_params)
 
     respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+      if @user.save!
+        UserMailer.with(user: @user).welcome_email.deliver_now
+        format.html { redirect_to(@user, notice: 'User was successfully created.') }
+        format.json { render json: @user, status: :created, location: @user }
+
       else
+        Rails.logger.info
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
@@ -62,13 +66,11 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :email)
+      params.fetch(:user).permit(:username, :email)
     end
 end
